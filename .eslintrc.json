@@ -1,0 +1,114 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    // airbnb´s best practice for javascript
+    "airbnb",
+
+    // import best practice
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+
+    // ESLint with Prettier
+    "prettier",
+    "prettier/@typescript-eslint",
+
+    // Doc: "add plugin:prettier/recommended as the last extension in your .eslintrc.json"
+    // Does three things:
+    // Turn on eslint-plugin-prettier.
+    // Sett prettier/prettier rule to "error"
+    // Extends eslint-config-prettier configuration.
+    "plugin:prettier/recommended",
+
+    // Recomended typescript rules
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["prettier", "@typescript-eslint", "react", "html", "json", "markdown", "react-hooks"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "singleQuote": true,
+        "printWidth": 100,
+        "quoteProps": "consistent"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["webpack/*.js", "test/**/*.{js,jsx,ts,tsx}", "**/*test.{js,jsx,ts,tsx}"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      {
+        "extensions": [".js", ".jsx", ".json", ".ts", ".tsx"]
+      }
+    ],
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "max-len": ["warn", { "code": 100 }],
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/no-empty-interface": "warn",
+    "no-unused-expressions": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": "off",
+    "react/no-unused-state": "off",
+    "react/jsx-curly-newline": "off",
+    "no-restricted-globals": "off",
+    "no-param-reassign": "off",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "no-irregular-whitespace": "off",
+    "react/prop-types": "off",
+    "react/no-render-return-value": "off",
+    "no-nested-ternary": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.d.ts"],
+      "rules": {}
+    },
+    {
+      "files": ["./webpack/*"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

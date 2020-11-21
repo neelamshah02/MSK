@@ -1,0 +1,48 @@
+{
+  //  todo: return to true after mvp
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "jsx": "react",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "sourceMap": true,
+    "outDir": "./dist/",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "downlevelIteration": true,
+    "strict": true,
+    //  todo: return to true after mvp
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    //  todo: return to true after mvp
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/types/*"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noEmit": true
+  },
+  "include": [
+    "./src/**/*", "webpack.config.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

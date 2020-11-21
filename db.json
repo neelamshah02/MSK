@@ -1,0 +1,37 @@
+{
+  "accounts": [
+    {
+      "id": 11,
+      "name": "Ola Hansen",
+      "type": 1,
+      "data": "150545*****",
+      "creationDate": "24.12.2018",
+      "expirationDate": "01.01.2021",
+      "oppgaver": "Ubegrenset",
+      "taskText": "This is a message about this task, please take it serious",
+      "restrictionText": "This is a message about the restrictions, please take it serious"
+    },
+    {
+      "id": 22,
+      "name": "Donny Brasko",
+      "type": 1,
+      "data": "110898*****",
+      "creationDate": "18.07.2016",
+      "expirationDate": "21.12.2026",
+      "oppgaver": "Ubegrenset",
+      "taskText": "This is a message about this task, please take it serious",
+      "restrictionText": "This is a message about the restrictions, please take it serious"
+    },
+    {
+      "id": 33,
+      "name": "Nullpointer Industries",
+      "type": 0,
+      "data": "110898*****",
+      "creationDate": "18.07.2016",
+      "expirationDate": "ubestemt",
+      "oppgaver": "Viktige oppgaver",
+      "taskText": "This is a message about this task, please take it serious",
+      "restrictionText": "This is a message about the restrictions, please take it serious"
+    }
+  ]
+}
