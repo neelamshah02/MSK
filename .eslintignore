@@ -33,5 +33,6 @@ default.env
 *.css
 *.woff
 *.woff2
+*.mp4
 
 !**/.eslintrc*

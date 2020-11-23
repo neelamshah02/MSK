@@ -60,7 +60,7 @@ const MainMenuCardPanel: React.FC = () => {
         {(user.role === Role.VesselOwner ||
           user.role === Role.ManningCompany ||
           user.role === Role.Admin) && (
-          <Link to="/registerseagoing/person">
+          <Link id="seagoing-flow" to="/registerseagoing/person">
             <IconTile
               tileTitle={
                 <TileTitle title={intl.formatMessage({ id: 'menucard.icontile.seagoing.title' })} />
