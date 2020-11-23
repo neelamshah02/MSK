@@ -31,7 +31,7 @@ const Routes: React.FC<RouterProps> = ({ Header, ContentSection }) => {
     <HashRouter>
       <Header />
       <ContentSection>
-        <H1>Min side kvalifikasjoner</H1>
+        <Title>Min side kvalifikasjoner</Title>
         <Switch>
           <PrivateRoute exact path={routes.home} component={Home} />
           <PrivateRoute exact path={routes.seagoingPerson} component={SeagoingPerson} />
@@ -93,7 +93,7 @@ const Routes: React.FC<RouterProps> = ({ Header, ContentSection }) => {
 
 export default Routes;
 
-const H1 = styled.h1`
+const Title = styled.h1`
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.primary4};
   padding: 50px 0;

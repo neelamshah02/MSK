@@ -21,7 +21,7 @@ const SeagoingTime: React.FC<RouteComponentProps> = ({ history }) => {
   const PersonDetails = `${assessmentDetails.person?.firstName} ${assessmentDetails.person?.lastName} - ${assessmentDetails.person?.personNumber}`;
   return (
     <Container>
-      <H1>{intl.formatMessage({ id: 'assessment.header.title' })}</H1>
+      <H1>{intl.formatMessage({ id: 'assessment.heading' })}</H1>
       {PersonDetails}
       <NavigationBlock>
         <Navigation
