@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-wrap-multilines */
 import React, { useCallback, useState, useContext } from 'react';
-import styled from 'styled-components';
+import styled, { ThemeContext } from 'styled-components';
 import { useIntl } from 'react-intl';
 import { Form, Formik, FieldArray, Field } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
-import { Input, Loader, SearchBar, styles, SdiAdd, SdiClose, SdiEdit } from '@sdir/sds';
+import { Input, Loader, SearchBar, styles, SdiAdd, SdiClose, SdiEdit, TextLink } from '@sdir/sds';
 import { AxiosResponse } from 'axios';
-import { ErrorMessageDiv } from '../../Atoms';
+import { ErrorMessageDiv, PageTitle } from '../../Atoms';
 import { setCourseAndEducation } from '../../../store/actions/action';
 import { Navigation, ButtonWithLink, FormInput } from '../../Molecules';
 import { CourseAndEducation, SystemState, PersonDetails } from '../../../types';
@@ -30,6 +30,7 @@ const CourseAndEducationRegistration: React.FC<RouteComponentProps> = ({ history
   const [changeDateVal, setChangeDateVal] = useState('');
   const [isEditCourse, setIsEditCourse] = useState(false);
   const [searchResult, setSearchResult] = useState<CourseSearch[]>([]);
+  const theme = useContext(ThemeContext);
 
   const intl = useIntl();
   const dispatch = useDispatch();
@@ -214,6 +215,7 @@ const CourseAndEducationRegistration: React.FC<RouteComponentProps> = ({ history
     <Loader />
   ) : (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'reportCourse.page.title' })} />
       <H1>{intl.formatMessage({ id: 'reportcourceandeducation.header.title' })}</H1>
       <Card>
         <Header>{intl.formatMessage({ id: 'reportcourceandeducation.card.course.title' })}</Header>
@@ -315,17 +317,18 @@ const CourseAndEducationRegistration: React.FC<RouteComponentProps> = ({ history
                 render={({ remove, push }) => (
                   <div>
                     {values.users.length > 0 &&
-                      values.users.map((i, k) => (
-                        <div className="row" key={i.personNumber + k}>
+                      values.users.map((_i, k) => (
+                        <div className="row" key={k}>
                           <InputDiv>
                             <Field
                               name={`users.${k}.personNumber`}
                               label={intl.formatMessage({
                                 id: 'reportseagoing.input.personnumber'
                               })}
-                              type="text"
+                              type="number"
                               component={FormInput}
                             />
+
                             <Field
                               name={`users.${k}.firstName`}
                               label={intl.formatMessage({
@@ -343,9 +346,13 @@ const CourseAndEducationRegistration: React.FC<RouteComponentProps> = ({ history
                               component={FormInput}
                             />
                             {values.users.length > 1 && (
-                              <RemoveButton type="button" onClick={() => remove(k)}>
-                                X
-                              </RemoveButton>
+                              <TextLink
+                                strong
+                                textColor={theme.colors.error}
+                                text={intl.formatMessage({ id: 'general.delete' })}
+                                click={() => remove(k)}
+                                size="1.5rem"
+                              />
                             )}
                           </InputDiv>
                         </div>
@@ -433,12 +440,6 @@ const LinkAndButton = styled.div`
 
 const NavigationBlock = styled.div`
   width: 80%;
-`;
-const RemoveButton = styled.button`
-  height: 3rem;
-  width: 3rem;
-  margin-top: 1rem;
-  color: ${({ theme }) => theme.colors.alert.errorHot};
 `;
 
 const InputDiv = styled.div`

@@ -9,6 +9,7 @@ import { setAdditionalCompetence } from '../../../store/actions/action';
 import { SystemState, AdditionalCompetence } from '../../../types';
 import { Navigation, FormInput } from '../../Molecules';
 import FormSelect from '../../Molecules/FormSelect';
+import { PageTitle } from '../../Atoms';
 
 interface GetAdditionalCompetenceFormValues {
   vessel: string;
@@ -92,6 +93,8 @@ const AdditionalCompetenceCompetence: React.FC<RouteComponentProps> = ({ history
 
   return (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'registeradditionalcompetence.page.title' })} />
+
       <H1>{intl.formatMessage({ id: 'registeradditionalcompetence.header.title' })}</H1>
       <Card>
         <Header>

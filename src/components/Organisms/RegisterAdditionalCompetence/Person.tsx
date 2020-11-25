@@ -11,7 +11,7 @@ import { FormInput, Navigation } from '../../Molecules';
 import { SystemState, PersonDetails, AdditionalCompetence } from '../../../types';
 import { apiUrls } from '../../../services/ApiService';
 import ApiServiceContext from '../../../services/contexts/ApiServiceContext';
-import { ErrorMessageDiv } from '../../Atoms';
+import { ErrorMessageDiv, PageTitle } from '../../Atoms';
 
 const AdditionalCompetencePersonPage: React.FC<RouteComponentProps> = ({ history }) => {
   const { apiService } = useContext(ApiServiceContext);
@@ -91,6 +91,8 @@ const AdditionalCompetencePersonPage: React.FC<RouteComponentProps> = ({ history
     <Loader />
   ) : (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'registeradditionalcompetence.page.title' })} />
+
       <H1>{intl.formatMessage({ id: 'registeradditionalcompetence.header.title' })}</H1>
       <Formik
         initialValues={initialValues}

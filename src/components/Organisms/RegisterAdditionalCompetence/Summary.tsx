@@ -7,6 +7,7 @@ import { RouteComponentProps } from 'react-router-dom';
 import { setAdditionalCompetence } from '../../../store/actions/action';
 import { SystemState, AdditionalCompetence } from '../../../types';
 import { Navigation, ButtonWithLink } from '../../Molecules';
+import { PageTitle } from '../../Atoms';
 
 const AdditionalCompetenceSummary: React.FC<RouteComponentProps> = ({ history }) => {
   const intl = useIntl();
@@ -104,6 +105,8 @@ const AdditionalCompetenceSummary: React.FC<RouteComponentProps> = ({ history })
     <Loader />
   ) : (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'registeradditionalcompetence.page.title' })} />
+
       <H1>{intl.formatMessage({ id: 'registeradditionalcompetence.header.title' })}</H1>
       <CardContainer>
         <DataCard title={AdditionalCompetencePersonDetails}>

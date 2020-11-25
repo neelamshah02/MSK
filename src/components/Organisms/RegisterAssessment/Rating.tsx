@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import { Navigation } from '../../Molecules';
 import { SystemState } from '../../../types';
+import { PageTitle } from '../../Atoms';
 
 const SeagoingTime: React.FC<RouteComponentProps> = ({ history }) => {
   const intl = useIntl();
@@ -21,7 +22,8 @@ const SeagoingTime: React.FC<RouteComponentProps> = ({ history }) => {
   const PersonDetails = `${assessmentDetails.person?.firstName} ${assessmentDetails.person?.lastName} - ${assessmentDetails.person?.personNumber}`;
   return (
     <Container>
-      <H1>{intl.formatMessage({ id: 'assessment.header.title' })}</H1>
+      <PageTitle title={intl.formatMessage({ id: 'assessment.page.title' })} />
+      <H1>{intl.formatMessage({ id: 'assessment.heading' })}</H1>
       {PersonDetails}
       <NavigationBlock>
         <Navigation

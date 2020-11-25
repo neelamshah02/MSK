@@ -1,12 +1,12 @@
 export default {
   nb: {
+    'menucard.page.title': 'Min side kvalifikasjoner',
     'menucard.icontile.course.title': 'Meld inn kurs eller utdanning',
     'menucard.icontile.seagoing.title': 'Meld inn fartstid',
     'menucard.icontile.competence.title': 'Meld inn tilleggskompetanse',
     'menucard.icontile.assessor.title': 'Meld inn assessorbedømmelse',
     'menucard.icontile.report.title': 'Rapporter',
     'reportseagoing.header.title': 'Meld inn fartstid',
-    'reportseagoing.vessel.delete': 'Slett',
     'reportseagoing.error.message': 'Ugyldig kombinasjon av personnummer, fornavn og etternavn.',
     'reportseagoing.input.personnumber': 'Lim inn D-/personnummer',
     'reportseagoing.input.firstname': 'Fornavn',
@@ -20,6 +20,7 @@ export default {
     'reportseagoing.cardheader.title': 'Bekreftelse',
     'reportseagoing.confirmation.text':
       'Takk, vi har mottatt din melding for fartstid knyttet til {name}, på fartøy {vessel}. Du finner oversikt over all innsendt fartstid under rapporter.',
+    'reportCourse.page.title': 'Kurs og utdannelse',
     'reportcourceandeducation.header.title': 'Meld inn fullførte kurs',
     'reportcourceandeducation.summary.cardheader.title': 'Oppsummering',
     'reportcourceandeducation.input.course': 'Søk blant kurs',
@@ -30,6 +31,7 @@ export default {
     'reportcourceandeducation.card.save': 'Lagre',
     'reportcourceandeducation.button.addNew.title': 'Legg til nytt kurs',
     'reportcourceandeducation.button.addmore.title': 'Legg til flere deltagere',
+    'registeradditionalcompetence.page.title': 'Tilleggskompetanse',
     'registeradditionalcompetence.header.title': 'Meld inn tilleggskompetanse',
     'registeradditionalcompetence.card.person.name': 'Navn',
     'registeradditionalcompetence.card.person.personnumber': 'Personnummer',
@@ -65,16 +67,18 @@ export default {
     'button.send.title': 'Send inn',
     'error.general': 'Noe gikk galt, prøv igjen senere.',
     'error.noResult': 'Ingen resultater funnet.',
-    'assessment.heading': 'Meld inn assessorbedømmelse'
+    'assessment.heading': 'Meld inn assessorbedømmelse',
+    'assessment.page.title': 'Assessorbedømmelse',
+    'general.delete': 'slett'
   },
   en: {
+    'menucard.page.title': 'My qualifications',
     'menucard.icontile.course.title': 'Register course or education',
     'menucard.icontile.seagoing.title': 'Register sea going time',
     'menucard.icontile.competence.title': 'Register additional competence',
     'menucard.icontile.assessor.title': 'Submit assessor assessment',
     'menucard.icontile.report.title': 'Reports',
     'reportseagoing.header.title': 'Send in sea going time',
-    'reportseagoing.vessel.delete': 'Delete',
     'reportseagoing.error.message':
       'Invalid combination of personal number, first name and last name.',
     'reportseagoing.input.personnumber': 'Paste D-Number/Personal number',
@@ -89,6 +93,7 @@ export default {
     'reportseagoing.addnew.button.title': 'Add more seagoing time ',
     'reportseagoing.confirmation.text':
       'Thank you, we have recieved your report for seagoing time for {name}, on vessel {vessel}. You will find an overview of all registrations under reports.',
+    'reportCourse.page.title': 'Courses and education',
     'reportcourceandeducation.header.title': 'Enroll completed courses',
     'reportcourceandeducation.summary.cardheader.title': 'Summary',
     'reportcourceandeducation.input.course': 'Search courses',
@@ -99,6 +104,7 @@ export default {
     'reportcourceandeducation.card.save': 'Save',
     'reportcourceandeducation.button.addNew.title': 'Add new course',
     'reportcourceandeducation.button.addmore.title': 'Add more participants',
+    'registeradditionalcompetence.page.title': 'Additional competence',
     'registeradditionalcompetence.input.personnumber': 'D-/Personnumber',
     'registeradditionalcompetence.input.firstname': 'Firstname',
     'registeradditionalcompetence.input.lastname': 'Lastname',
@@ -134,6 +140,8 @@ export default {
     'button.send.title': 'Send',
     'error.general': 'Something went wrong, please try again later.',
     'error.noResult': 'No result found.',
-    'assessment.heading': 'Sunmit assessment'
+    'assessment.heading': 'Submit assessment',
+    'assessment.page.title': 'Assessor rating',
+    'general.delete': 'delete'
   }
 };
