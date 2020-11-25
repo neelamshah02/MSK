@@ -10,7 +10,7 @@ import { Navigation } from '../../Molecules';
 import { CourseAndEducationHeader } from '../../../helpers/dummyData';
 import { apiUrls } from '../../../services/ApiService';
 import ApiServiceContext from '../../../services/contexts/ApiServiceContext';
-import { ErrorMessageDiv } from '../../Atoms';
+import { ErrorMessageDiv, PageTitle } from '../../Atoms';
 import { errorHandler } from '../../../helpers/FormHelper';
 
 const CourseAndEducationSummary: React.FC<RouteComponentProps> = ({ history }) => {
@@ -85,6 +85,7 @@ const CourseAndEducationSummary: React.FC<RouteComponentProps> = ({ history }) =
     <Loader />
   ) : (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'reportCourse.page.title' })} />
       <H1>{intl.formatMessage({ id: 'reportcourceandeducation.header.title' })}</H1>
       <TableContainer>
         {data.length > 0 && (

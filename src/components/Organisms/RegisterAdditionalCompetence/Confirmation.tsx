@@ -5,6 +5,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { DataCard, Button } from '@sdir/sds';
 import styled from 'styled-components';
 import { SystemState } from '../../../types';
+import { PageTitle } from '../../Atoms';
 
 const AdditionalCompetenceConfirmation: React.FC = () => {
   const intl = useIntl();
@@ -19,6 +20,7 @@ const AdditionalCompetenceConfirmation: React.FC = () => {
 
   return (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'registeradditionalcompetence.page.title' })} />
       <H1>{intl.formatMessage({ id: 'registeradditionalcompetence.header.title' })}</H1>
       <TableContainer>
         <DataCard

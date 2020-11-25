@@ -5,6 +5,7 @@ import { DataCard, Button } from '@sdir/sds';
 import styled, { ThemeContext } from 'styled-components';
 import { useSelector } from 'react-redux';
 import { SystemState } from '../../../types';
+import { PageTitle } from '../../Atoms';
 
 const SeagoingConfirmation: React.FC = () => {
   const intl = useIntl();
@@ -14,6 +15,8 @@ const SeagoingConfirmation: React.FC = () => {
   const theme = useContext(ThemeContext);
   return (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'reportCourse.page.title' })} />
+
       <H1>{intl.formatMessage({ id: 'reportseagoing.header.title' })}</H1>
       <TableContainer>
         <DataCard title={intl.formatMessage({ id: 'reportseagoing.cardheader.title' })}>

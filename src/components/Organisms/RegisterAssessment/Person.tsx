@@ -11,7 +11,7 @@ import { Navigation, FormInput } from '../../Molecules';
 import { SystemState, PersonDetails, AssessmentDetails } from '../../../types';
 import { apiUrls } from '../../../services/ApiService';
 import ApiServiceContext from '../../../services/contexts/ApiServiceContext';
-import { ErrorMessageDiv } from '../../Atoms';
+import { ErrorMessageDiv, PageTitle } from '../../Atoms';
 
 const ReportSeagoing: React.FC<RouteComponentProps> = ({ history }) => {
   const { apiService } = useContext(ApiServiceContext);
@@ -90,6 +90,8 @@ const ReportSeagoing: React.FC<RouteComponentProps> = ({ history }) => {
     <Loader />
   ) : (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'registeradditionalcompetence.page.title' })} />
+
       <H1>{intl.formatMessage({ id: 'assessment.heading' })}</H1>
       <Formik
         initialValues={initialValues}

@@ -11,7 +11,7 @@ import { Navigation } from '../../Molecules';
 import { SystemState, CourseAndEducation, CourseSearch } from '../../../types';
 import ApiServiceContext from '../../../services/contexts/ApiServiceContext';
 import { apiUrls } from '../../../services/ApiService';
-import { ErrorMessageDiv } from '../../Atoms';
+import { ErrorMessageDiv, PageTitle } from '../../Atoms';
 
 const ReportCourseAndEducation: React.FC<RouteComponentProps> = ({ history }) => {
   const intl = useIntl();
@@ -68,6 +68,7 @@ const ReportCourseAndEducation: React.FC<RouteComponentProps> = ({ history }) =>
 
   return (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'reportCourse.page.title' })} />
       <H1>{intl.formatMessage({ id: 'reportcourceandeducation.header.title' })}</H1>
       <CourseAndEducationDetails>
         <CourseInput>

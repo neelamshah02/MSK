@@ -43,7 +43,7 @@ const TableCard: React.FC<TableProps> = ({
         <TextLink
           strong
           textColor="red"
-          text={intl.formatMessage({ id: 'reportseagoing.header.title' })}
+          text={intl.formatMessage({ id: 'general.delete' })}
           click={() => deleteSeagoingDetail(vesselName)}
           size="1.5rem"
         />

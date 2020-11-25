@@ -5,6 +5,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { DataCard, Button } from '@sdir/sds';
 import styled from 'styled-components';
 import { SystemState } from '../../../types';
+import { PageTitle } from '../../Atoms';
 
 const SeagoingConfirmation: React.FC = () => {
   const intl = useIntl();
@@ -19,6 +20,7 @@ const SeagoingConfirmation: React.FC = () => {
 
   return (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'datacard.seagoing.title' })} />
       <H1>{intl.formatMessage({ id: 'reportseagoing.header.title' })}</H1>
       <TableContainer>
         <DataCard title={intl.formatMessage({ id: 'reportseagoing.cardheader.title' })}>

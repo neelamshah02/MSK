@@ -10,7 +10,7 @@ import { Navigation } from '../../Molecules';
 import { SystemState } from '../../../types';
 import ApiServiceContext from '../../../services/contexts/ApiServiceContext';
 import { apiUrls } from '../../../services/ApiService';
-import { ErrorMessageDiv } from '../../Atoms';
+import { ErrorMessageDiv, PageTitle } from '../../Atoms';
 import { errorHandler } from '../../../helpers/FormHelper';
 
 const SeagoingSummary: React.FC<RouteComponentProps> = ({ history }) => {
@@ -81,6 +81,7 @@ const SeagoingSummary: React.FC<RouteComponentProps> = ({ history }) => {
     <Loader />
   ) : (
     <Container>
+      <PageTitle title={intl.formatMessage({ id: 'datacard.seagoing.title' })} />
       <H1>{intl.formatMessage({ id: 'reportseagoing.header.title' })}</H1>
       <TableContainer>
         <DataCard

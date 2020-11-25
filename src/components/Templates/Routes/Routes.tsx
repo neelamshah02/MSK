@@ -1,5 +1,4 @@
 import React, { ComponentType } from 'react';
-import styled from 'styled-components';
 import { Route, Switch, HashRouter } from 'react-router-dom';
 import { routes } from './constants';
 import { Home, Login, Callback, ErrorPage } from '../../Pages';
@@ -31,7 +30,6 @@ const Routes: React.FC<RouterProps> = ({ Header, ContentSection }) => {
     <HashRouter>
       <Header />
       <ContentSection>
-        <Title>Min side kvalifikasjoner</Title>
         <Switch>
           <PrivateRoute exact path={routes.home} component={Home} />
           <PrivateRoute exact path={routes.seagoingPerson} component={SeagoingPerson} />
@@ -92,9 +90,3 @@ const Routes: React.FC<RouterProps> = ({ Header, ContentSection }) => {
 };
 
 export default Routes;
-
-const Title = styled.h1`
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.primary4};
-  padding: 50px 0;
-`;

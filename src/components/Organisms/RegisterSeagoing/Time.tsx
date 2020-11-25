@@ -17,7 +17,7 @@ import useGet from '../../../services/hooks/useGet';
 import { apiUrls } from '../../../services/ApiService';
 import Page from '../../Templates/Page';
 import ApiServiceContext from '../../../services/contexts/ApiServiceContext';
-import { ErrorMessageDiv } from '../../Atoms';
+import { ErrorMessageDiv, PageTitle } from '../../Atoms';
 
 interface GetSeagoingDetailsValues {
   jobTitle: string;
@@ -206,6 +206,8 @@ const SeagoingTime: React.FC<RouteComponentProps> = ({ history }) => {
   ) : (
     <Page error={error} loading={loading}>
       <Container>
+        <PageTitle title={intl.formatMessage({ id: 'datacard.seagoing.title' })} />
+
         <H1>{intl.formatMessage({ id: 'reportseagoing.header.title' })}</H1>
         <Formik
           initialValues={initialValues}
